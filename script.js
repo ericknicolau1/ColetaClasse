@@ -50,7 +50,7 @@ function gerarPDF() {
     const margin = 10;
     const contentWidth = pageWidth - (margin * 2);
     const rowHeight = 10;
-    const headerColor = '#87CEFA'; // Azul claro
+    const headerColor = '#04456D'; // Azul claro
     let y = margin;
 
     // Função auxiliar para criar cabeçalhos azuis
