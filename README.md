@@ -16,7 +16,7 @@ Este projeto consiste em um formulário web para coleta de dados de classes de e
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/dolthub/dolt](https://github.com/dolthub/dolt)
+    git clone [https://github.com/ericknicolau1/ColetaClasse](https://github.com/ericknicolau1/ColetaClasse)
     ```
 2.  **Abra o arquivo `index.html`** em seu navegador web.
 3.  **Preencha o formulário** com as informações da classe.
