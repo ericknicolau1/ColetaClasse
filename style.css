@@ -1,52 +1,128 @@
+/* Estilos Gerais */
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    background-color: #E6F1FB; /* Azul claro (semelhante ao SED) */
+    color: #333; /* Cor do texto */
 }
+
 .container {
-    width: 80%;
-    margin: auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white; /* Cor de fundo do conteúdo */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 h1 {
     text-align: center;
+    color: #1A4C7A; /* Azul escuro (semelhante ao SED) */
 }
+
 .form-row {
     margin-bottom: 15px;
 }
+
 .form-row label {
     display: block;
     margin-bottom: 5px;
+    color: #555;
 }
+
 .form-row input[type="text"],
 .form-row select,
 .form-row textarea,
 .form-row input[type="date"] {
-    width: calc(100% - 12px);
-    padding: 5px;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 16px;
+    background-color: #F9F9F9; /* Cor de fundo dos campos */
 }
+
 .checkbox-group {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 4px;
+    background-color: #fafafa;
 }
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
 }
+
 table th, table td {
     border: 1px solid #ccc;
-    padding: 8px;
+    padding: 10px;
     text-align: left;
 }
+
 button {
-    padding: 10px 15px;
-    background-color: #4CAF50;
+    padding: 12px 20px;
+    background-color: #1A4C7A; /* Azul escuro */
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
 }
+
 button:hover {
-    background-color: #45a049;
+    background-color: #155A8A; /* Azul mais escuro para hover */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    table th, table td {
+        font-size: 14px;
+    }
+
+    .form-row input[type="text"],
+    .form-row select,
+    .form-row textarea,
+    .form-row input[type="date"] {
+        padding: 8px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    .form-row input[type="text"],
+    .form-row select,
+    .form-row textarea,
+    .form-row input[type="date"] {
+        font-size: 14px;
+    }
+
+    .form-row {
+        margin-bottom: 10px;
+    }
+
+    .checkbox-group {
+        padding: 8px;
+    }
+
+    button {
+        padding: 10px;
+    }
 }
