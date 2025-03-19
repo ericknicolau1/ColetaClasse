@@ -157,8 +157,7 @@ function gerarPDF() {
                    '7. Data Início', document.getElementById('dataInicio').value);
     
    // 8. Atividade de Recurso
-   doc.text('8- Atividade de Recurso', margin, y);
-   y += 10;
+   y = criarCabecalho('8. Atividade de Recurso', y);
 
    const atividades = document.querySelectorAll('input[name="atividadeRecurso"]');
    const atividadesSelecionadas = Array.from(atividades).filter(atividade => atividade.checked);
