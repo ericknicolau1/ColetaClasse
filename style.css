@@ -1,128 +1,157 @@
 /* Estilos Gerais */
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #E6F1FB; /* Azul claro (semelhante ao SED) */
-    color: #333; /* Cor do texto */
+    margin: 0;
+    padding: 20px;
+    background-color: #E6F1FB; /* Azul claro */
+    color: #333;
 }
 
 .container {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1000px;
+    margin: auto;
     padding: 20px;
-    background-color: white; /* Cor de fundo do conteúdo */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
-    color: #1A4C7A; /* Azul escuro (semelhante ao SED) */
+    color: #1A4C7A;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
+/* Layout dos campos de formulário */
 .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Reduz espaço entre label e input */
     margin-bottom: 15px;
 }
 
 .form-row label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 2px;
 }
 
-.form-row input[type="text"],
-.form-row select,
-.form-row textarea,
-.form-row input[type="date"] {
+.form-row input, 
+.form-row select, 
+.form-row textarea {
     width: 100%;
     padding: 10px;
-    margin: 5px 0 10px 0;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 16px;
-    background-color: #F9F9F9; /* Cor de fundo dos campos */
+    background: #F9F9F9;
+    transition: all 0.3s ease;
+    text-align: left;
 }
 
-.checkbox-group {
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 4px;
-    background-color: #fafafa;
+.form-row input:focus, 
+.form-row select:focus, 
+.form-row textarea:focus {
+    border-color: #1A4C7A;
+    outline: none;
+    box-shadow: 0 0 5px rgba(26, 76, 122, 0.5);
 }
 
-.checkbox-group input {
-    margin-right: 10px;
-}
-
+/* Estilo para tabelas */
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 10px;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
 }
 
 table th, table td {
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 12px;
     text-align: left;
 }
 
+table th {
+    background: #1A4C7A;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background: #F1F9FF;
+}
+
+/* Botões */
 button {
-    padding: 12px 20px;
-    background-color: #1A4C7A; /* Azul escuro */
+    width: 100%;
+    padding: 14px;
+    background-color: #1A4C7A;
     color: white;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    border-radius: 6px;
     font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 button:hover {
-    background-color: #155A8A; /* Azul mais escuro para hover */
+    background: #155A8A;
+}
+
+/* Ajustes na exibição dos checkboxes */
+/* Ajustes na exibição dos checkboxes */
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px 20px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    white-space: normal;
+    text-align: left;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+    transform: scale(1);
+    /* Ajustes adicionais para reduzir o espaço ocupado pelo checkbox */
+    width: 16px; /* Ajuste conforme necessário */
+    height: 16px; /* Ajuste conforme necessário */
+}
+
+/* Opcional: ajustar o espaço entre o checkbox e o rótulo */
+.checkbox-container label {
+    margin-left: -2px; /* Ajuste conforme necessário */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     .container {
-        padding: 10px;
+        padding: 15px;
     }
-
     table th, table td {
         font-size: 14px;
     }
-
-    .form-row input[type="text"],
-    .form-row select,
-    .form-row textarea,
-    .form-row input[type="date"] {
-        padding: 8px;
-    }
-
-    button {
-        width: 100%;
+    .checkbox-group {
+        grid-template-columns: 1fr; /* Coloca os checkboxes em uma única coluna em telas pequenas */
     }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 22px;
+        font-size: 20px;
     }
-
-    .form-row input[type="text"],
-    .form-row select,
-    .form-row textarea,
-    .form-row input[type="date"] {
+    .form-row input, 
+    .form-row select, 
+    .form-row textarea {
         font-size: 14px;
-    }
-
-    .form-row {
-        margin-bottom: 10px;
-    }
-
-    .checkbox-group {
-        padding: 8px;
-    }
-
-    button {
-        padding: 10px;
     }
 }
