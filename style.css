@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+h1 {
+    text-align: center;
+}
+.form-row {
+    margin-bottom: 15px;
+}
+.form-row label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-row input[type="text"],
+.form-row select,
+.form-row textarea,
+.form-row input[type="date"] {
+    width: calc(100% - 12px);
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.checkbox-group {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
