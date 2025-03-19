@@ -15,7 +15,7 @@ Este projeto consiste em um formulário web para coleta de dados de classes de e
 ## Como Usar
 
 1.  **Clone o repositório:**
-    ```bash
+   ```bash
     git clone [https://github.com/ericknicolau1/ColetaClasse](https://github.com/ericknicolau1/ColetaClasse)
     ```
 2.  **Abra o arquivo `index.html`** em seu navegador web.
