@@ -211,7 +211,7 @@ function gerarPDF() {
     y += rowHeight * 2 + 2;
     
     // Rodapé
-    y = criarCabecalho('EQUIPE - CIE FRANCA', y);
+    
     
     doc.save('coleta_classe.pdf');
 }
